@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: delivery-cost
+  config:
+    import: "optional:consul:"
+  cloud:
+    consul:
+      discovery:
+        healthCheckPath: /actuator/health
+        healthCheckInterval: 20s
+        healthCheckTimeout: 50s
+
+server:
+  port: 8080
+
+app:
+  default-currency: "EUR"
+
